@@ -1,0 +1,19 @@
+def ebob(sayi1, sayi2):
+    bölenler2 = []
+    bölenler1 = []
+    for i in range(1 , sayi1 + 1):
+        if sayi1 % i == 0:
+            bölenler1.append(i)
+    for x in range(1 , sayi2 + 1):
+        if sayi2 % x == 0:
+            bölenler1.append(x)
+    for bölüm in bölenler1:
+        
+        if sayi1 % bölüm == 0:
+            if sayi2 % bölüm == 0:
+                bölenler2.append(bölüm)
+    print(max(bölenler2))
+
+sayi1 = int(input('sayi 1: '))
+sayi2 = int(input('sayi 2: '))    
+ebob(sayi1, sayi2)
